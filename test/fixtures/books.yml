@@ -3,9 +3,9 @@
 one:
   firstname: MyString
   lastname: MyString
-  number: 1
+  number: MyString
 
 two:
   firstname: MyString
   lastname: MyString
-  number: 1
+  number: MyString
