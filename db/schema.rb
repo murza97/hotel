@@ -18,19 +18,7 @@ ActiveRecord::Schema.define(version: 20181213154641) do
     t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "guests", force: :cascade do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.integer "number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "shops", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "deleted_at", null: false
   end
 
 end

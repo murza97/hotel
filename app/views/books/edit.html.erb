@@ -1,5 +1,5 @@
-<h2>Добавление новой записи<h2/>
-<%= form_for :book, url: books_path do |f| %>
+<h2>Внесение изменения о госте<h2/>
+<%= form_for :book, url: book_path(@book), method: :patch do |f| %>
  <% if @book.errors.any? %>
    <% @book.errors.full_messages.each do |msg| %>
      <div class="alert alert-danger"><%= msg %></div>

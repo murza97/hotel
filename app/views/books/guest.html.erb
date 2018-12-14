@@ -1,1 +1,10 @@
-<h3>Гостевая книга</h3>
+<h1>Наши гости</h1>
+<% @book.each do |book| %>
+<hr>
+ <div class="well">
+  <p style="blue"><strong>Фамилия:</strong> <%= book.firstname %></p>
+  <p><strong>Имя</strong>: <%= book.lastname %></p>
+  <p><strong>Контактный телефон</strong>: <%= book.number %></p>
+     <%= link_to "Полная информация о госте", book_path(book), :class => 'btn btn-default' %>
+    </div>
+<% end %>

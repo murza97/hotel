@@ -1,3 +1,8 @@
-<h1><%= @book.firstname %></h1>
-<h2><%= @book.lastname %></h2>
-<h3><%= @book.number %></h3>
+<h1>Полная информация</h1>
+<hr>
+<p><strong>Фамилия:</strong><%= @book.firstname %></p>
+<p><strong>Имя:</strong><%= @book.lastname %></p>
+<p><strong>Контактная информация:</strong><%= @book.number %></p>
+<hr>
+<%= link_to "Внести изменения", edit_book_path(@book), :class => 'btn btn-warning' %>
+<%= link_to "Удалить информацию", book_path(@book), method: :delete, data: {confirm:"Вы точно хотите удалить запись?"}, :class => 'btn btn-danger' %>
