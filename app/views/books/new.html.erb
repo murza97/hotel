@@ -1,4 +1,11 @@
 <h2>Добавление новой записи<h2/>
+  <style>
+     body {
+      background-size: cover; /* Масштабируем фон */
+      background-image: url(../qwe.jpg); /* Путь к фоновому изображению */
+      color: #d77d31;
+     }
+  </style>
 <%= form_for :book, url: books_path do |f| %>
  <% if @book.errors.any? %>
    <% @book.errors.full_messages.each do |msg| %>
@@ -11,11 +18,11 @@
 </p>
 <p>
   Имя<br>
-  <%= f.text_area(:lastname, {:class => 'form-control'}) %>
+  <%= f.text_field(:lastname, {:class => 'form-control'}) %>
 </p>
 <p>
   Контакты<br>
-  <%= f.text_area(:number, {:class => 'form-control'}) %>
+  <%= f.text_field(:number, {:class => 'form-control'}) %>
 </p>
 <p>
   <%= f.submit(:class => 'btn btn-success') %>

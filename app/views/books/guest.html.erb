@@ -1,10 +1,17 @@
 <h1>Наши гости</h1>
+<style>
+   body {
+    background-size: cover; /* Масштабируем фон */
+    background-image: url(../qwe.jpg); /* Путь к фоновому изображению */
+    color: #d77d31;
+   }
+</style>
 <% @book.each do |book| %>
-<hr>
- <div class="well">
-  <p style="blue"><strong>Фамилия:</strong> <%= book.firstname %></p>
-  <p><strong>Имя</strong>: <%= book.lastname %></p>
-  <p><strong>Контактный телефон</strong>: <%= book.number %></p>
-     <%= link_to "Полная информация о госте", book_path(book), :class => 'btn btn-default' %>
+    <hr>
+     <div class="well">
+      <p style="blue"><strong>Фамилия:</strong> <%= book.firstname %></p>
+      <p><strong>Имя</strong>: <%= book.lastname %></p>
+      <p><strong>Контактный телефон</strong>: <%= book.number %></p>
+         <%= link_to "Полная информация о госте", book_path(book), :class => 'btn btn-default' %>
     </div>
 <% end %>
