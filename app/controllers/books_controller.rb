@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+  http_basic_authenticate_with name: "Admin", password: "89141",
+  except: [:guest, :show, :create, :new]
+
   def guest
     @book =Book.all
   end
@@ -12,6 +15,7 @@ class BooksController < ApplicationController
   end
 
   def edit
+
     @book = Book.find(params[:id])
   end
 
@@ -41,8 +45,8 @@ class BooksController < ApplicationController
   else
     render 'new'
   end
-end
+  end
   private def book_params
     params.require(:book).permit(:firstname, :lastname, :number)
    end
-end
+  end
