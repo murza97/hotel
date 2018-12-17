@@ -1,5 +1,4 @@
 <h2>Добавление новой записи<h2/>
-<<<<<<< HEAD
   <style>
      body {
       background-size: cover; /* Масштабируем фон */
@@ -29,22 +28,3 @@
   <%= f.submit(:class => 'btn btn-success') %>
 </p>
 <% end %>
-=======
-<%= form_for :book, url: books_path do |f| %>
-  <p>
-      Фамилия<br>
-      <%= f.text_field(:firstname, {:class => 'form-control'}) %>
-    </p>
-    <p>
-        Имя<br>
-        <%= f.text_area(:lastname, {:class => 'form-control'}) %>
-      </p>
-      <p>
-          Контакты<br>
-          <%= f.text_area(:number, {:class => 'form-control'}) %>
-        </p>
-      <p>
-          <%= f.submit(:class => 'btn btn-success') %>
-        </p>
-      <% end %>
->>>>>>> 5acc5a2... version_1_1_fix

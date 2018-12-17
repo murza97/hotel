@@ -3,17 +3,22 @@
 one:
   firstname: MyString
   lastname: MyString
-<<<<<<< HEAD
+
   number: MyString
-=======
+
   number: 1
->>>>>>> 5acc5a2... version_1_1_fix
+
+  number: MyString
+
 
 two:
   firstname: MyString
   lastname: MyString
-<<<<<<< HEAD
+
+
   number: MyString
-=======
+
   number: 1
->>>>>>> 5acc5a2... version_1_1_fix
+
+  number: MyString
+

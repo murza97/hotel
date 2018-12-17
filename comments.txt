@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-1 rails new 'project'
-2 rails generate controller books main shop
-3 rails g model Book firstname:string lastname:string number:string --force
+
 4 rake db:migrate
 5 rails s
 добавить
@@ -12,10 +9,3 @@ validates :number, format: { with: /\+7\d{10}/ },
   presence: true
 }
 go to 3
-=======
-rails new 'project'
-rails generate controller books main shop
-rails g model Book firstname:string lastname:string number:integer --force
-rake db:migrate
-rails s
->>>>>>> 5acc5a2... version_1_1_fix
