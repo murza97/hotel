@@ -1,6 +1,4 @@
 class BooksController < ApplicationController
-  http_basic_authenticate_with name: "Admin", password: "89141",
-  except: [:guest, :show, :create, :new]
 
   def guest
     @book =Book.all
