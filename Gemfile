@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'simplecov', require: false, group: :test
 gem 'simplecov-rcov'
-gem 'simplecov', :require => false, :group => :test
 
 gem 'coffee-script-source', '1.8.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -33,16 +33,16 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
-  gem 'rspec-rails'#, '~> 3.8'
+  gem 'rspec-rails' # , '~> 3.8'
 end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rspec'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara'#, '~> 2.13'
+  gem 'capybara' # , '~> 2.13'
   gem 'selenium-webdriver'
 end
 
@@ -52,4 +52,4 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

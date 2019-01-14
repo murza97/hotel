@@ -1,5 +1,3 @@
 class LetmeoutController < ApplicationController
-  def questtwo
-
-  end
+  def questtwo; end
 end

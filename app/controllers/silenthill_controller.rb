@@ -1,5 +1,3 @@
 class SilenthillController < ApplicationController
-  def questone
-    
-  end
+  def questone; end
 end

@@ -13,5 +13,5 @@
  *= require_tree .
  *= require_self
  */
-
-  background-image: url(image-path('qwe.jpg'));
+  /*require turbolinks*/
+  /*background-image: url(image-path('qwe.jpg'));*/

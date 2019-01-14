@@ -6,8 +6,8 @@
     color: #d77d31;
    }
 </style>
+<ul>
 <% @book.each do |book| %>
-    <hr>
      <div class="well">
       <p style="blue"><strong>Фамилия:</strong> <%= book.firstname %></p>
       <p><strong>Имя</strong>: <%= book.lastname %></p>
@@ -15,3 +15,4 @@
          <%= link_to "Полная информация о госте", book_path(book), :class => 'btn btn-default' %>
     </div>
 <% end %>
+</ul>

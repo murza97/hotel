@@ -1,6 +1,6 @@
-class ShopController# < ApplicationController
+class ShopController # < ApplicationController
   def shop
-    "shop"
+    'shop'
   end
 
   def truth
