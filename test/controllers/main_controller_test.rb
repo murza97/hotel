@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class MainControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should return true" do
+    assert_equal( true, MainController.truth, "Test is failure" )
+  end
 end

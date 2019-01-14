@@ -1,5 +1,15 @@
-rails new 'project'
-rails generate controller books main shop
-rails g model Book firstname:string lastname:string number:integer --force
-rake db:migrate
-rails s
+1 rails new 'project'
+2 rails generate controller books main shop
+3 rails g model Book firstname:string lastname:string number:integer --force
+4 rake db:migrate
+5 rails s
+добавить
+{
+validates :firstname, presence: true, length:  {minimum: 2}, format: { with:  /\A[a-zA-Z]+\z/, message: " has incorrect symbol"}
+validates :lastname, presence: true, length:  {minimum: 2}, format: { with:  /\A[a-zA-Z]+\z/, message: " has incorrect symbol"}
+validates :number, format: { with: /\+7\d{10}/ },
+  presence: true
+}
+go to 3
+for rspec:view need installed gem install rspec-activemodel-mocks
+after 14 rspec:view:tests will be working
