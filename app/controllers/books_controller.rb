@@ -1,14 +1,4 @@
 class BooksController < ApplicationController
-  before_action :set_book
-  def set_book
-    @book = Book.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @book }
-    end
-  end
-
   http_basic_authenticate_with name: 'Admin', password: '89141',
                                except: %i[guest show create new]
 
@@ -44,7 +34,7 @@ class BooksController < ApplicationController
       redirect_to @book
     else
       render 'edit'
-   end
+    end
   end
 
   def destroy
@@ -61,9 +51,10 @@ class BooksController < ApplicationController
       redirect_to @book
     else
       render 'new'
+    end
   end
-  end
-  private def book_params
+
+  def book_params
     params.require(:book).permit(:firstname, :lastname, :number)
-   end
   end
+end

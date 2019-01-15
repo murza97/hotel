@@ -14,7 +14,7 @@ RSpec.describe Book, type: :model do
       book = Book.new(number: 'Number').save
       expect(book).to eq(false)
     end
-    it 'should save successfully' do
+    it 'saves successfully' do
       book = Book.new(firstname: 'First', lastname: 'Last', number: 'Number').save
       expect(book).to eq(true)
     end

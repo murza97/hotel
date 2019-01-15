@@ -1,4 +1,4 @@
-class ShopController # < ApplicationController
+class ShopController < ApplicationController
   def shop
     'shop'
   end
